@@ -68,3 +68,11 @@ conansync/build.gradle
 conansync/aar
 conansync/libs
 conansync/src
+
+# UPMパッケージ
+Packages/com.vrmc.gltf/
+Packages/com.vrmc.vrm/
+
+# すべてのtar.gzファイルを除外
+*.tar.gz
+

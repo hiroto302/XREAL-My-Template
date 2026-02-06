@@ -15,7 +15,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
-      "version": "1.0.6",
+      "version": "2.0.3",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
@@ -118,11 +118,11 @@
       }
     },
     "com.unity.test-framework": {
-      "version": "1.1.33",
+      "version": "1.4.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.ext.nunit": "1.0.6",
+        "com.unity.ext.nunit": "2.0.3",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
@@ -246,6 +246,27 @@
         "com.unity.xr.legacyinputhelpers": "2.1.11"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.vrmc.gltf": {
+      "version": "file:com.vrmc.gltf",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.test-framework": "1.4.6",
+        "com.unity.mathematics": "1.2.6"
+      }
+    },
+    "com.vrmc.vrm": {
+      "version": "file:com.vrmc.vrm",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.timeline": "1.7.6",
+        "com.vrmc.gltf": "0.131.0"
+      }
     },
     "com.xreal.xr": {
       "version": "file:../com.xreal.xr.tar.gz",
