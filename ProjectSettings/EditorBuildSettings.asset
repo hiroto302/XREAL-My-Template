@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/XREAL XR Plugin/3.1.0/AR Features/Anchors/Anchors.unity
     guid: aa2e19841fe5c75479a0f832eea05291
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/XREAL XR Plugin/3.1.0/Camera Features/RGBCameraAndCapture/RGBCameraAndCapture.unity
     guid: 2d86868521ba3954d99c23196bc13949
+  - enabled: 1
+    path: Assets/Scenes/HelloMR_MyCustom.unity
+    guid: 90a1027832685455982cd352a6468fd4
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 7ff3cc84cfbc14b428241653eda48e36, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3c48157b70d3a46e8a108a6c8141f177, type: 2}
