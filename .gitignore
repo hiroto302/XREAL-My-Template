@@ -76,3 +76,5 @@ Packages/com.vrmc.vrm/
 # すべてのtar.gzファイルを除外
 *.tar.gz
 
+# UnityのAssetStore からインポートしたもの
+ImportAssets/
