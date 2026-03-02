@@ -21,6 +21,7 @@ MonoBehaviour:
   - CAMERA
   - VIBRATION
   - AUDIO
+  - RECORD_AUDIO
   EnableAutoLogcat: 1
   EnableNativeSessionManager: 0
   SupportDevices: 0200000001000000
