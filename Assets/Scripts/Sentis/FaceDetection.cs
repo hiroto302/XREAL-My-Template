@@ -6,9 +6,9 @@ using UnityEngine.UI;
 /// <summary>
 /// Sentis 1.4.0-pre.3 (旧API) で BlazeFace Short Range を静止画テストするスクリプト。
 /// モデル出力をデコードして Canvas 上にバウンディングボックスを描画する。
-/// Sentis_Sample Scene で 動作確認済み。このクラスをベースに、動画ストリーム対応や他モデルへの拡張を行う予定。
+/// FaceDetectionTest を 動画ストリーミングに対応させていく
 /// </summary>
-public class FaceDetectionTest : MonoBehaviour
+public class FaceDetection : MonoBehaviour
 {
     [Header("Sentis")]
     [SerializeField] private ModelAsset modelAsset;
