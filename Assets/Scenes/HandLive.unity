@@ -5869,11 +5869,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543881888}
-  - component: {fileID: 1543881889}
-  - component: {fileID: 1543881890}
-  - component: {fileID: 1543881891}
   - component: {fileID: 1543881892}
   - component: {fileID: 1543881893}
+  - component: {fileID: 1543881894}
   m_Layer: 0
   m_Name: RGBCamera
   m_TagString: Untagged
@@ -5897,64 +5895,6 @@ Transform:
   - {fileID: 170754118}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -57.521, z: 0}
---- !u!114 &1543881889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543881887}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00e84ada4a57d94ab4f9bfd2a573fc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImageFormatText: {fileID: 609789494}
-  m_YUVImage: {fileID: 731227054}
-  m_PlayButton: {fileID: 722281480}
-  m_StopButton: {fileID: 1701997345}
---- !u!114 &1543881890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543881887}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d7d8f71139a43248d4ae07f36c6e59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: 4b454c1868a0d4cf9b0ff25e5f1cb502, type: 3}
-  previewImage: {fileID: 731227054}
-  yuvMaterial: {fileID: 2100000, guid: bbd448ddc4cd0cb42a5f809e967a4477, type: 2}
-  overlayContainer: {fileID: 807071034}
-  statusText: {fileID: 912732303}
-  scoreThreshold: 0.5
-  iouThreshold: 0.3
-  detectIntervalFrames: 5
---- !u!114 &1543881891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543881887}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a115aac558b7a435d8f554dceef255bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: 4b454c1868a0d4cf9b0ff25e5f1cb502, type: 3}
-  yuvMaterial: {fileID: 2100000, guid: bbd448ddc4cd0cb42a5f809e967a4477, type: 2}
-  previewImage: {fileID: 731227054}
-  statusText: {fileID: 912732303}
-  scoreThreshold: 0.5
-  iouThreshold: 0.3
-  detectIntervalFrames: 5
-  markerSize: 0.2
-  markerColor: {r: 0, g: 1, b: 0, a: 0.5}
-  markerMaterial: {fileID: 0}
 --- !u!114 &1543881892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5986,7 +5926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543881887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61473b9bd28134dd48845ed31617b08b, type: 3}
   m_Name: 
@@ -6000,6 +5940,32 @@ MonoBehaviour:
   statusText: {fileID: 912732303}
   scoreThreshold: 0.5
   detectIntervalFrames: 5
+  keypointColor: {r: 0.2, g: 0.6, b: 1, a: 1}
+  lineColor: {r: 1, g: 1, b: 1, a: 0.9}
+  dotSize: 12
+  lineThickness: 4
+--- !u!114 &1543881894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543881887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d851736bd7b48d39b7322fa7dc465e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectorModelAsset: {fileID: 5022602860645237092, guid: 241d8d60ed9954363a4f8a56e989110e, type: 3}
+  landmarkerModelAsset: {fileID: 5022602860645237092, guid: 9817212e973e94896875006d98e454fd, type: 3}
+  anchorsCSV: {fileID: 4900000, guid: 2931524647f4b44d39478d00d935eb9e, type: 3}
+  cropShader: {fileID: 4800000, guid: d383d9aac34ec44a5a64814efb8757cf, type: 3}
+  yuvMaterial: {fileID: 2100000, guid: bbd448ddc4cd0cb42a5f809e967a4477, type: 2}
+  previewImage: {fileID: 731227054}
+  overlayContainer: {fileID: 807071034}
+  statusText: {fileID: 912732303}
+  scoreThreshold: 0.5
+  detectIntervalFrames: 10
   keypointColor: {r: 0.2, g: 0.6, b: 1, a: 1}
   lineColor: {r: 1, g: 1, b: 1, a: 0.9}
   dotSize: 12
