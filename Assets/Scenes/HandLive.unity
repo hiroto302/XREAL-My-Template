@@ -5872,6 +5872,7 @@ GameObject:
   - component: {fileID: 1543881892}
   - component: {fileID: 1543881893}
   - component: {fileID: 1543881894}
+  - component: {fileID: 1543881895}
   m_Layer: 0
   m_Name: RGBCamera
   m_TagString: Untagged
@@ -5951,7 +5952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543881887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19d851736bd7b48d39b7322fa7dc465e, type: 3}
   m_Name: 
@@ -5970,6 +5971,26 @@ MonoBehaviour:
   lineColor: {r: 1, g: 1, b: 1, a: 0.9}
   dotSize: 12
   lineThickness: 4
+--- !u!114 &1543881895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543881887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df27d19ca5e9549019b7493557503a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectorModelAsset: {fileID: 5022602860645237092, guid: 241d8d60ed9954363a4f8a56e989110e, type: 3}
+  landmarkerModelAsset: {fileID: 5022602860645237092, guid: 9817212e973e94896875006d98e454fd, type: 3}
+  anchorsCSV: {fileID: 4900000, guid: 2931524647f4b44d39478d00d935eb9e, type: 3}
+  cropShader: {fileID: 4800000, guid: d383d9aac34ec44a5a64814efb8757cf, type: 3}
+  yuvMaterial: {fileID: 2100000, guid: bbd448ddc4cd0cb42a5f809e967a4477, type: 2}
+  statusText: {fileID: 912732303}
+  scoreThreshold: 0.5
+  detectIntervalFrames: 10
 --- !u!1 &1598321279
 GameObject:
   m_ObjectHideFlags: 0

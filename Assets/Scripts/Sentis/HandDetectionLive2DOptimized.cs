@@ -98,6 +98,9 @@ public class HandDetectionLive2DOptimized : MonoBehaviour
     // --- 最適化1: GPU クロップシェーダー用マテリアル ---
     private Material _cropMaterial;
 
+    // --- ジェスチャー ---
+    public GestureType CurrentGesture { get; private set; }
+
     // --- 最適化3: 事前割り当て UI オブジェクト ---
     private RectTransform[] _dotObjects;   // キーポイントドット (21個)
     private RectTransform[] _boneObjects;  // スケルトン線 (23個)
@@ -340,7 +343,8 @@ public class HandDetectionLive2DOptimized : MonoBehaviour
         UpdateSkeleton(points2D);
         UpdateKeypoints(points2D);
 
-        if (statusText != null) statusText.text = $"Hand detected  score={bestScore:F2}";
+        CurrentGesture = ClassifyGesture(points2D);
+        if (statusText != null) statusText.text = $"Hand: {CurrentGesture}  score={bestScore:F2}";
     }
 
     // -----------------------------------------------------------------------
@@ -417,6 +421,31 @@ public class HandDetectionLive2DOptimized : MonoBehaviour
             rect.localRotation    = Quaternion.Euler(0f, 0f, angle);
             rect.gameObject.SetActive(true);
         }
+    }
+
+    // -----------------------------------------------------------------------
+    // ジェスチャー判別
+    // -----------------------------------------------------------------------
+
+    static GestureType ClassifyGesture(Vector2[] pts)
+    {
+        Vector2 wrist = pts[0];
+        int[] mcpIndices = { 5, 9, 13, 17 };
+        int[] tipIndices = { 8, 12, 16, 20 };
+        const float threshold = 1.5f;
+
+        int extendedCount = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            float tipDist = Vector2.Distance(pts[tipIndices[i]], wrist);
+            float mcpDist = Vector2.Distance(pts[mcpIndices[i]], wrist);
+            if (mcpDist > 1e-5f && tipDist > mcpDist * threshold)
+                extendedCount++;
+        }
+
+        if (extendedCount >= 4) return GestureType.Pa;
+        if (extendedCount <= 1) return GestureType.Gu;
+        return GestureType.Unknown;
     }
 
     // -----------------------------------------------------------------------
