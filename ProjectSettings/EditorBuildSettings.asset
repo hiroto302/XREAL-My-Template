@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/HelloMR_MyCustom.unity
     guid: 90a1027832685455982cd352a6468fd4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MyRGBCameraAndCapture.unity
     guid: aa42271fb3a934d49a165b21a157dd8e
+  - enabled: 1
+    path: Assets/Scenes/HandLive.unity
+    guid: a57636fe174ba4e7393778646df040e8
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 7ff3cc84cfbc14b428241653eda48e36, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3c48157b70d3a46e8a108a6c8141f177, type: 2}
