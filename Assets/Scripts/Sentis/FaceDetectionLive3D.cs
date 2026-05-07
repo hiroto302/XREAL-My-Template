@@ -315,6 +315,10 @@ public class FaceDetectionLive3D : MonoBehaviour
         _activeMarkers.Clear();
     }
 
+    /// <summary>
+    /// 検出結果を3D空間にビルボードマーカーとして描画する。
+    /// </summary>
+    /// <param name="detections">検出結果のリスト</param>
     void Draw3DMarkers(List<Detection> detections)
     {
         foreach (var d in detections)
